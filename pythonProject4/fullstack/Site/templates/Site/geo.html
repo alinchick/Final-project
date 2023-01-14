@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>География</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="{% static 'css/home.css'%}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a class = "prof">
+            <div>
+                <img src="/static/pic/3.png" width="100%">
+            </div>
+        </a>
+        <div class="wrapper">
+            <div class="menu">
+                <nav class="menu-list">
+                    <a href="/">Главная</a>
+                    <a href="/vostr">Востребованность</a>
+                    <a href="/geo">География</a>
+                    <a href="/skills">Навыки</a>
+                    <a href="#">Последние вакансии</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+                <section style="margin-bottom: 5%;">
+                    {% for b in pic %}
+                    <div>
+                        <img src="/media/{{ b.pic}}" style="width: 70%; margin-left: 15%;">
+                    </div>
+                    {% endfor %}
+                </section>
+        </div>
+    </main>
+    <footer>
+        <a class = "name">
+            <div>
+                <p>&ensp;</p>
+                <p>Сабитова Алина Равильевна, АТ-03, РИ-210931</p>
+            </div>
+        </a>
+    </footer>
+</body>
+</html>
